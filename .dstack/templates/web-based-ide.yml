@@ -1,0 +1,33 @@
+type: wizard-template
+id: web-based-ide
+title: Web-based IDE
+
+parameters:
+  - type: name
+  - type: offers
+  - type: python_or_docker
+  - type: repo
+  - type: working_dir
+    
+  - type: env
+    title: Password
+    name: PASSWORD
+    value: $random-password
+
+template:
+  type: service
+  auth: false
+  https: false
+
+  env:
+    - BIND_ADDR=0.0.0.0:8080
+  commands:
+    - |
+      curl -fsSL https://code-server.dev/install.sh | sh -s -- --method standalone --prefix /tmp/code-server
+    - |
+      /tmp/code-server/bin/code-server --bind-addr $BIND_ADDR --auth password --disable-telemetry --disable-update-check .
+  port: 8080
+
+  probes:
+    - type: http
+      url: /healthz
