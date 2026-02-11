@@ -13,12 +13,12 @@ Currently, the scope of templates is limited to `dstack` UI:
 
 ## Supported parameters
 
-| Type               | Description                                                                                         |
-|--------------------|-----------------------------------------------------------------------------------------------------|
-| `name`             | Allows to configure an optional run name.                        |
-| `ide`              | Allows to configure a desktop IDE (e.g. VS Code, Cursor, etc.).                                 |
-| `offers`           | Allows to configure resources, etc.   |
-| `python_or_docker` | Allows to configure either Python or Docker image. |
-| `repo`             | Allows to optionally configure a repo.                                       |
-| `working_dir`      | Allows to optionally configure a working dir.               |
-| `env`              | Allows to configure additional environment variable. The special value `$random-password` tells the UI to automatically set the value by generating a random password. |
+| Type               | Description                                                                   |
+|--------------------|-------------------------------------------------------------------------------|
+| `name`             | Allows to configure an optional run name.                                     |
+| `ide`              | Allows to configure a desktop IDE (e.g. VS Code, Cursor, etc.).               |
+| `resources`        | Allows to configure resources, etc.                                           |
+| `python_or_docker` | Allows to configure either Python or Docker image.                            |
+| `repo`             | Allows to optionally configure a repo.                                        |
+| `working_dir`      | Allows to optionally configure a working dir.                                 |
+| `env`              | Allows to configure additional environment variable. The special value `$random-password` tells the UI to automatically set the value by generating a random password.                         |

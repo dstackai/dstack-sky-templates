@@ -5,7 +5,7 @@ title: Desktop IDE
 parameters:
   - type: name
   - type: ide
-  - type: offers
+  - type: resources
   - type: python_or_docker
   - type: repo
   - type: working_dir
