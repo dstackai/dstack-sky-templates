@@ -10,5 +10,5 @@ parameters:
   - type: repo
   - type: working_dir
 
-temlate_yaml:
+template:
   type: dev-environment
