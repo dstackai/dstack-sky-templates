@@ -21,12 +21,13 @@ configuration:
   
   auth: false
   gateway: true
-  https: auto
+  # https: auto
 
   env:
     - BIND_ADDR=0.0.0.0:8080
   commands:
-    - echo "WARNING: Your code-server password is $PASSWORD. Share it carefully as it grants full access to the IDE."
+    - |
+      echo "Your password is $PASSWORD. Share it carefully as it grants full access to the IDE."
     - |
       curl -fsSL https://code-server.dev/install.sh | sh -s -- --method standalone --prefix /tmp/code-server
     - |
