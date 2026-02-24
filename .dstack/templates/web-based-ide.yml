@@ -1,6 +1,8 @@
-type: ui-template
-id: web-based-ide
-title: Web-based IDE
+type: template
+name: in-browser-ide
+
+title: In-browser IDE
+description: Access the instance using VS Code in the browser.
 
 parameters:
   - type: name
@@ -14,14 +16,17 @@ parameters:
     name: PASSWORD
     value: $random-password
 
-template:
+configuration:
   type: service
+  
   auth: false
-  https: false
+  gateway: true
+  https: auto
 
   env:
     - BIND_ADDR=0.0.0.0:8080
   commands:
+    - echo "WARNING: Your code-server password is $PASSWORD. Share it carefully as it grants full access to the IDE."
     - |
       curl -fsSL https://code-server.dev/install.sh | sh -s -- --method standalone --prefix /tmp/code-server
     - |

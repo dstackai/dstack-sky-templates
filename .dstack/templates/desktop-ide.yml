@@ -1,6 +1,8 @@
-type: ui-template
-id: desktop-ide
+type: template
+name: desktop-ide
+
 title: Desktop IDE
+description: Access the instance from your desktop VS Code, Cursor, or Windsurf.
 
 parameters:
   - type: name
@@ -10,5 +12,5 @@ parameters:
   - type: repo
   - type: working_dir
 
-template:
+configuration:
   type: dev-environment
