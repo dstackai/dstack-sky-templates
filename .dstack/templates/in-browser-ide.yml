@@ -21,7 +21,7 @@ configuration:
   
   auth: false
   gateway: true
-  # https: auto
+  https: auto
 
   env:
     - BIND_ADDR=0.0.0.0:8080
