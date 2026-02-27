@@ -19,10 +19,6 @@ parameters:
 configuration:
   type: service
   
-  auth: false
-  gateway: true
-  https: auto
-
   env:
     - BIND_ADDR=0.0.0.0:8080
   commands:
@@ -37,3 +33,7 @@ configuration:
   probes:
     - type: http
       url: /healthz
+
+  gateway: true
+  https: auto
+  auth: false
